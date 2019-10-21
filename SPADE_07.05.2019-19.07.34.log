@@ -1,0 +1,1984 @@
+七月 05, 2019 7:08:03 下午 spade.core.Kernel addCommand 信息: Adding reporter: Audit
+七月 05, 2019 7:08:03 下午 spade.reporter.Audit initKafkaProducer 信息: bootstrap.servers = 192.168.1.128:9092
+七月 05, 2019 7:08:03 下午 spade.reporter.Audit initKafkaProducer 信息: acks = all
+七月 05, 2019 7:08:03 下午 spade.reporter.Audit initKafkaProducer 信息: retries = 0
+七月 05, 2019 7:08:03 下午 spade.reporter.Audit initKafkaProducer 信息: batch.size = 16384
+七月 05, 2019 7:08:03 下午 spade.reporter.Audit initKafkaProducer 信息: linger.ms = 1
+七月 05, 2019 7:08:03 下午 spade.reporter.Audit initKafkaProducer 信息: buffer.memory = 33554432
+七月 05, 2019 7:08:03 下午 spade.reporter.Audit initKafkaProducer 信息: topic = abc7
+七月 05, 2019 7:08:03 下午 spade.reporter.Audit initKafkaProducer 信息: repeat times = 1000
+七月 05, 2019 7:08:03 下午 spade.utility.HostInfo$ReadFromOperatingSystem readSerialNumberFromDbusFile 严重: Failed to check if file is readable: /var/lib/dbus/machine-id
+java.lang.Exception: Path does not exist
+	at spade.utility.FileUtility.isFile(FileUtility.java:170)
+	at spade.utility.FileUtility.isFileReadable(FileUtility.java:189)
+	at spade.utility.HostInfo$ReadFromOperatingSystem.readSerialNumberFromDbusFile(HostInfo.java:219)
+	at spade.utility.HostInfo$ReadFromOperatingSystem.readSafe(HostInfo.java:113)
+	at spade.utility.HostInfo.generateCurrentHostFile(HostInfo.java:678)
+	at spade.reporter.Audit.createHostVertex(Audit.java:282)
+	at spade.reporter.Audit.initKafkaProducer(Audit.java:340)
+	at spade.reporter.Audit.launch(Audit.java:1230)
+	at spade.core.Kernel.addCommand(Kernel.java:815)
+	at spade.core.Kernel.executeCommand(Kernel.java:553)
+	at spade.core.Kernel$LocalControlConnection.run(Kernel.java:1576)
+	at java.lang.Thread.run(Thread.java:748)
+
+七月 05, 2019 7:08:03 下午 spade.utility.HostInfo$ReadFromOperatingSystem readTA1Version 严重: Failed to check if file is readable: /etc/tc-version
+java.lang.Exception: Path does not exist
+	at spade.utility.FileUtility.isFile(FileUtility.java:170)
+	at spade.utility.FileUtility.isFileReadable(FileUtility.java:189)
+	at spade.utility.HostInfo$ReadFromOperatingSystem.readTA1Version(HostInfo.java:250)
+	at spade.utility.HostInfo$ReadFromOperatingSystem.readSafe(HostInfo.java:114)
+	at spade.utility.HostInfo.generateCurrentHostFile(HostInfo.java:678)
+	at spade.reporter.Audit.createHostVertex(Audit.java:282)
+	at spade.reporter.Audit.initKafkaProducer(Audit.java:340)
+	at spade.reporter.Audit.launch(Audit.java:1230)
+	at spade.core.Kernel.addCommand(Kernel.java:815)
+	at spade.core.Kernel.executeCommand(Kernel.java:553)
+	at spade.core.Kernel$LocalControlConnection.run(Kernel.java:1576)
+	at java.lang.Thread.run(Thread.java:748)
+
+七月 05, 2019 7:08:03 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  hostType: "desktop"
+  hostName: "localhost.localdomain"
+  hostOperationSystem: "#1"
+  interfaceCount: "2"
+  type: "Artifact"
+}
+
+七月 05, 2019 7:08:03 下午 spade.reporter.Audit serializeAndCompressRecToKafka 信息: Starting to serialize and compress rec to kafka!
+七月 05, 2019 7:08:03 下午 spade.reporter.Audit produceBytesMsgToKafka 信息: topic = abc7value = [B@5532f639
+七月 05, 2019 7:08:04 下午 spade.reporter.Audit serializeAndCompressRecToKafka 信息: Send to Kafak Successfully!
+七月 05, 2019 7:08:04 下午 spade.reporter.Audit initFlagsFromArguments 信息: Audit flags: syscall=null, fileIO=true, netIO=true, units=true, waitForLog=true, netfilter=false, refineNet=false, localEndpoints=true, handleLocalEndpoints=true, failfast=true, mergeUnit=null, harden=false, reportKill=true
+七月 05, 2019 7:08:04 下午 spade.reporter.Audit initFlagsFromArguments 信息: Audit flags (Globals): 'unixSockets'='true', 'versionNetworkSockets'='false', 'versionFiles'='true', 'versionMemorys'='true', 'versionNamedPipes'='true', 'versionUnnamedPipes'='true', 'versionUnknowns'='true', 'versionUnixSockets'='true', 'versionUnixSocketPairs'='true', 'versionNetworkSocketPairs'='false', 'versions'='false', 'epochs'='true', 'permissions'='true'
+七月 05, 2019 7:08:04 下午 spade.utility.CommonFunctions createExternalMemoryMapInstance 信息: Audit[ArtifactsMap]: ExternalMemoryMap created with params: cache size=100,000, db path=tmp/artifactsDB_1562324884113, db name=artifactsDB_1562324884113, false positive prob=0, expected number of elements=1,000,000, reporting interval in millis=120,000
+七月 05, 2019 7:08:04 下午 spade.utility.CommonFunctions createExternalMemoryMapInstance 信息: ProcessManager[ProcessUnitStatesMap]: ExternalMemoryMap created with params: cache size=66,000, db path=tmp/processStatesDB_1562324884297, db name=processStatesDB_1562324884297, false positive prob=0, expected number of elements=1,000,000, reporting interval in millis=120,000
+七月 05, 2019 7:08:04 下午 spade.reporter.Audit runSpadeAuditBridge 信息: Succesfully executed the command: 'bin/spadeAuditBridge -u -s /var/run/audispd_events'
+七月 05, 2019 7:08:04 下午 spade.reporter.Audit$2 run 信息: Starting get AuditEventReader Thread
+七月 05, 2019 7:08:04 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:08:05 下午 spade.reporter.Audit addKernelModule 信息: Command "insmod lib/kernel-modules/netio_controller.ko uids="0" syscall_success="1" pids_ignore="32643,97,32645,32833" ppids_ignore="32643,97,32645,32833" net_io="1" ignore_uids="1"" succeeded with output: [].
+七月 05, 2019 7:08:05 下午 spade.utility.Execute$Output log 信息: Command "auditctl -D" succeeded with output: [No rules].
+七月 05, 2019 7:08:05 下午 spade.utility.Execute$Output log 信息: Command "auditctl -a exit,always -F arch=b64 -F uid!=0 -S exit -S exit_group -F pid!=32643 -F pid!=97 -F pid!=32645 -F pid!=32833 -F ppid!=32643 -F ppid!=97 -F ppid!=32645 -F ppid!=32833 " succeeded with output: [].
+七月 05, 2019 7:08:05 下午 spade.utility.Execute$Output log 信息: Command "auditctl -a exit,always -F arch=b64 -F uid!=0 -S read -S readv -S pread -S preadv -S write -S writev -S pwrite -S pwritev -S mmap -S mprotect -S unlink -S unlinkat -S link -S linkat -S symlink -S symlinkat -S clone -S fork -S vfork -S execve -S open -S close -S creat -S openat -S mknodat -S mknod -S dup -S dup2 -S dup3 -S fcntl -S rename -S renameat -S setuid -S setreuid -S setgid -S setregid -S chmod -S fchmod -S fchmodat -S pipe -S pipe2 -S truncate -S ftruncate -S init_module -S finit_module -S tee -S splice -S vmsplice -S socketpair -S ptrace -F success=1 -F pid!=32643 -F pid!=97 -F pid!=32645 -F pid!=32833 -F ppid!=32643 -F ppid!=97 -F ppid!=32645 -F ppid!=32833 " succeeded with output: [].
+七月 05, 2019 7:08:05 下午 spade.core.Kernel addCommand 信息: Reporter added: Audit fileIO=true netIO=true unixSockets=true versions=false units=true
+七月 05, 2019 7:35:18 下午 spade.core.Kernel shutdown 信息: Shutting down SPADE....
+七月 05, 2019 7:35:18 下午 spade.utility.Execute$Output log 信息: Command "rmmod netio_controller" succeeded with output: [].
+七月 05, 2019 7:35:18 下午 spade.reporter.Audit shutdown 信息: Successfully removed the kernel controller module
+七月 05, 2019 7:35:18 下午 spade.reporter.Audit shutdown 信息: Going to wait for event reader thread to finish
+七月 05, 2019 7:35:18 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=CONFIG_CHANGE msg=audit(1562324885.546:1944): auid=0 ses=2 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 op=add_rule key=(null) list=4 res=1
+七月 05, 2019 7:35:18 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=CONFIG_CHANGE msg=audit(1562324885.559:1945): auid=0 ses=2 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 op=add_rule key=(null) list=4 res=1
+七月 05, 2019 7:35:18 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:18 下午 spade.reporter.Audit printStats 信息: Internal buffer size: 0, JVM memory in use: 27MB
+七月 05, 2019 7:35:18 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:18 下午 spade.reporter.audit.AuditEventReader printStats 信息: Overall rate: 0.001 records/sec in 1,634.635 seconds. Interval rate: 0.001 records/sec in 1,634.635 seconds.
+七月 05, 2019 7:35:18 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=SYSCALL msg=audit(1562325037.128:1946): arch=c000003e syscall=72 success=yes exit=0 a0=4 a1=1 a2=0 a3=0 items=0 ppid=1 pid=6121 auid=4294967295 uid=998 gid=996 euid=998 suid=998 fsuid=998 egid=996 sgid=996 fsgid=996 tty=(none) ses=4294967295 comm="chronyd" exe="/usr/sbin/chronyd" subj=system_u:system_r:chronyd_t:s0 key=(null)
+七月 05, 2019 7:35:18 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:18 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:18 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=PROCTITLE msg=audit(1562325037.128:1946): proctitle="/usr/sbin/chronyd"
+七月 05, 2019 7:35:18 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=SYSCALL msg=audit(1562325037.128:1947): arch=c000003e syscall=72 success=yes exit=0 a0=4 a1=2 a2=1 a3=0 items=0 ppid=1 pid=6121 auid=4294967295 uid=998 gid=996 euid=998 suid=998 fsuid=998 egid=996 sgid=996 fsgid=996 tty=(none) ses=4294967295 comm="chronyd" exe="/usr/sbin/chronyd" subj=system_u:system_r:chronyd_t:s0 key=(null)
+七月 05, 2019 7:35:18 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:18 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:18 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=PROCTITLE msg=audit(1562325037.128:1947): proctitle="/usr/sbin/chronyd"
+七月 05, 2019 7:35:18 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=USER msg=audit(1562325037.128:1948): netio_intercepted="syscall=42 exit=0 success=1 fd=4 pid=6121 ppid=1 uid=998 euid=998 suid=998 fsuid=998 gid=996 egid=996 sgid=996 fsgid=996 comm=6368726F6E7964 sock_type=2 local_saddr=0200AB68C0A80A0D0000000000000000 remote_saddr=0200007B4E2E66B40000000000000000 remote_saddr_size=16"
+七月 05, 2019 7:35:18 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:18 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:18 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=USER msg=audit(1562325037.129:1949): netio_intercepted="syscall=46 exit=48 success=1 fd=4 pid=6121 ppid=1 uid=998 euid=998 suid=998 fsuid=998 gid=996 egid=996 sgid=996 fsgid=996 comm=6368726F6E7964 sock_type=2 local_saddr=0200AB68C0A80A0D0000000000000000 remote_saddr= remote_saddr_size=0"
+七月 05, 2019 7:35:18 下午 spade.reporter.Audit$1 run 信息: spadeAuditBridge output: Flushing buffer before stopping
+七月 05, 2019 7:35:18 下午 spade.reporter.Audit$1 run 信息: spadeAuditBridge output: UBSI flush the log buffer: 42 events
+七月 05, 2019 7:35:18 下午 spade.reporter.Audit$1 run 信息: Exiting error reader thread for process: spadeAuditBridge
+七月 05, 2019 7:35:18 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:18 下午 spade.utility.ExternalMemoryMap printStats 信息: Audit[ArtifactsMap]: Total map accesses = 0, Interval map accesses = 0, Total Bloom filter false positives = 0, Interval Bloom filter false positives = 0, Total LRU cache hits = 0, Interval LRU cache hits = 0, Total LRU cache misses = 0, Interval LRU cache misses = 0, Total successful database hits = 0, Interval successful database hits = 0, Total failed database hits = 0, Interval failed database hits = 0, Total database insertions = 0, Interval database insertions = 0, Current in-memory element count = 0
+七月 05, 2019 7:35:18 下午 spade.utility.ExternalMemoryMap printStats 信息: ProcessManager[ProcessUnitStatesMap]: Total map accesses = 0, Interval map accesses = 0, Total Bloom filter false positives = 0, Interval Bloom filter false positives = 0, Total LRU cache hits = 0, Interval LRU cache hits = 0, Total LRU cache misses = 0, Interval LRU cache misses = 0, Total successful database hits = 0, Interval successful database hits = 0, Total failed database hits = 0, Interval failed database hits = 0, Total database insertions = 0, Interval database insertions = 0, Current in-memory element count = 0
+七月 05, 2019 7:35:18 下午 spade.reporter.Audit putEdge 信息: starting to put edge
+七月 05, 2019 7:35:18 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  remoteAddress: "78.46.102.180"
+  remotePort: "123"
+  epoch: "0"
+  protocol: "udp"
+  localAddress: "192.168.10.13"
+  localPort: "43880"
+  subtype: "network socket"
+  source: "syscall"
+  type: "Artifact"
+}
+
+七月 05, 2019 7:35:18 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  pid: "6121"
+  egid: "996"
+  euid: "998"
+  gid: "996"
+  uid: "998"
+  name: "chronyd"
+  ppid: "1"
+  seenTime: "1562325037.128"
+  unit: "0"
+  source: "syscall"
+  type: "Process"
+}
+
+七月 05, 2019 7:35:18 下午 spade.reporter.Audit generateEdgeBuilder 信息: srcVertex {
+  annotations {
+    remoteAddress: "78.46.102.180"
+    remotePort: "123"
+    epoch: "0"
+    protocol: "udp"
+    localAddress: "192.168.10.13"
+    localPort: "43880"
+    subtype: "network socket"
+    source: "syscall"
+    type: "Artifact"
+  }
+}
+destVertex {
+  annotations {
+    pid: "6121"
+    egid: "996"
+    euid: "998"
+    gid: "996"
+    uid: "998"
+    name: "chronyd"
+    ppid: "1"
+    seenTime: "1562325037.128"
+    unit: "0"
+    source: "syscall"
+    type: "Process"
+  }
+}
+annotations {
+  eventId: "1948"
+  operation: "connect"
+  time: "1562325037.128"
+  source: "syscall"
+  type: "WasGeneratedBy"
+}
+
+七月 05, 2019 7:35:18 下午 spade.reporter.Audit putEdge 信息: current process event number = 1
+七月 05, 2019 7:35:18 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:18 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=SYSCALL msg=audit(1562325037.340:1950): arch=c000003e syscall=3 success=yes exit=0 a0=4 a1=5 a2=18 a3=55c0d9ed0520 items=0 ppid=1 pid=6121 auid=4294967295 uid=998 gid=996 euid=998 suid=998 fsuid=998 egid=996 sgid=996 fsgid=996 tty=(none) ses=4294967295 comm="chronyd" exe="/usr/sbin/chronyd" subj=system_u:system_r:chronyd_t:s0 key=(null)
+七月 05, 2019 7:35:18 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:18 下午 spade.reporter.Audit putEdge 信息: starting to put edge
+七月 05, 2019 7:35:18 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  remoteAddress: "78.46.102.180"
+  remotePort: "123"
+  epoch: "1"
+  protocol: "udp"
+  localAddress: "192.168.10.13"
+  localPort: "43880"
+  subtype: "network socket"
+  source: "syscall"
+  type: "Artifact"
+}
+
+七月 05, 2019 7:35:18 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  pid: "6121"
+  egid: "996"
+  euid: "998"
+  gid: "996"
+  uid: "998"
+  name: "chronyd"
+  ppid: "1"
+  seenTime: "1562325037.128"
+  unit: "0"
+  source: "syscall"
+  type: "Process"
+}
+
+七月 05, 2019 7:35:18 下午 spade.reporter.Audit generateEdgeBuilder 信息: srcVertex {
+  annotations {
+    remoteAddress: "78.46.102.180"
+    remotePort: "123"
+    epoch: "1"
+    protocol: "udp"
+    localAddress: "192.168.10.13"
+    localPort: "43880"
+    subtype: "network socket"
+    source: "syscall"
+    type: "Artifact"
+  }
+}
+destVertex {
+  annotations {
+    pid: "6121"
+    egid: "996"
+    euid: "998"
+    gid: "996"
+    uid: "998"
+    name: "chronyd"
+    ppid: "1"
+    seenTime: "1562325037.128"
+    unit: "0"
+    source: "syscall"
+    type: "Process"
+  }
+}
+annotations {
+  eventId: "1949"
+  operation: "send"
+  size: "48"
+  time: "1562325037.129"
+  source: "syscall"
+  type: "WasGeneratedBy"
+}
+
+七月 05, 2019 7:35:18 下午 spade.reporter.Audit putEdge 信息: current process event number = 2
+七月 05, 2019 7:35:18 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:18 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=PROCTITLE msg=audit(1562325037.340:1950): proctitle="/usr/sbin/chronyd"
+七月 05, 2019 7:35:18 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=SYSCALL msg=audit(1562325067.460:1951): arch=c000003e syscall=1 success=yes exit=1 a0=c a1=5654f73954ec a2=1 a3=1389770 items=0 ppid=6844 pid=6846 auid=4294967295 uid=89 gid=89 euid=89 suid=89 fsuid=89 egid=89 sgid=89 fsgid=89 tty=(none) ses=4294967295 comm="qmgr" exe="/usr/libexec/postfix/qmgr" subj=system_u:system_r:postfix_qmgr_t:s0 key=(null)
+七月 05, 2019 7:35:18 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:18 下午 spade.reporter.Audit putEdge 信息: starting to put edge
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  remoteAddress: "78.46.102.180"
+  remotePort: "123"
+  epoch: "1"
+  protocol: "udp"
+  localAddress: "192.168.10.13"
+  localPort: "43880"
+  subtype: "network socket"
+  source: "syscall"
+  type: "Artifact"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  pid: "6121"
+  egid: "996"
+  euid: "998"
+  gid: "996"
+  uid: "998"
+  name: "chronyd"
+  ppid: "1"
+  seenTime: "1562325037.128"
+  unit: "0"
+  source: "syscall"
+  type: "Process"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateEdgeBuilder 信息: srcVertex {
+  annotations {
+    remoteAddress: "78.46.102.180"
+    remotePort: "123"
+    epoch: "1"
+    protocol: "udp"
+    localAddress: "192.168.10.13"
+    localPort: "43880"
+    subtype: "network socket"
+    source: "syscall"
+    type: "Artifact"
+  }
+}
+destVertex {
+  annotations {
+    pid: "6121"
+    egid: "996"
+    euid: "998"
+    gid: "996"
+    uid: "998"
+    name: "chronyd"
+    ppid: "1"
+    seenTime: "1562325037.128"
+    unit: "0"
+    source: "syscall"
+    type: "Process"
+  }
+}
+annotations {
+  eventId: "1950"
+  operation: "close"
+  time: "1562325037.340"
+  source: "syscall"
+  type: "WasGeneratedBy"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: current process event number = 3
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=PROCTITLE msg=audit(1562325067.460:1951): proctitle=716D6772002D6C002D7400756E6978002D75
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=SYSCALL msg=audit(1562325067.461:1952): arch=c000003e syscall=0 success=yes exit=1 a0=b a1=7ffdaa493557 a2=1 a3=13382a8 items=0 ppid=6844 pid=6846 auid=4294967295 uid=89 gid=89 euid=89 suid=89 fsuid=89 egid=89 sgid=89 fsgid=89 tty=(none) ses=4294967295 comm="qmgr" exe="/usr/libexec/postfix/qmgr" subj=system_u:system_r:postfix_qmgr_t:s0 key=(null)
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: starting to put edge
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  epoch: "0"
+  fd: "12"
+  subtype: "unknown"
+  tgid: "6846"
+  source: "syscall"
+  type: "Artifact"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  pid: "6846"
+  egid: "89"
+  euid: "89"
+  gid: "89"
+  uid: "89"
+  name: "qmgr"
+  ppid: "6844"
+  seenTime: "1562325067.460"
+  unit: "0"
+  source: "syscall"
+  type: "Process"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateEdgeBuilder 信息: srcVertex {
+  annotations {
+    epoch: "0"
+    fd: "12"
+    subtype: "unknown"
+    tgid: "6846"
+    source: "syscall"
+    type: "Artifact"
+  }
+}
+destVertex {
+  annotations {
+    pid: "6846"
+    egid: "89"
+    euid: "89"
+    gid: "89"
+    uid: "89"
+    name: "qmgr"
+    ppid: "6844"
+    seenTime: "1562325067.460"
+    unit: "0"
+    source: "syscall"
+    type: "Process"
+  }
+}
+annotations {
+  eventId: "1951"
+  operation: "write"
+  size: "1"
+  time: "1562325067.460"
+  source: "syscall"
+  type: "WasGeneratedBy"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: current process event number = 4
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=PROCTITLE msg=audit(1562325067.461:1952): proctitle=716D6772002D6C002D7400756E6978002D75
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=SYSCALL msg=audit(1562325381.563:1953): arch=c000003e syscall=72 success=yes exit=0 a0=4 a1=1 a2=0 a3=0 items=0 ppid=1 pid=6121 auid=4294967295 uid=998 gid=996 euid=998 suid=998 fsuid=998 egid=996 sgid=996 fsgid=996 tty=(none) ses=4294967295 comm="chronyd" exe="/usr/sbin/chronyd" subj=system_u:system_r:chronyd_t:s0 key=(null)
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: starting to put edge
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  pid: "6846"
+  egid: "89"
+  euid: "89"
+  gid: "89"
+  uid: "89"
+  name: "qmgr"
+  ppid: "6844"
+  seenTime: "1562325067.460"
+  unit: "0"
+  source: "syscall"
+  type: "Process"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  epoch: "0"
+  fd: "11"
+  subtype: "unknown"
+  tgid: "6846"
+  source: "syscall"
+  type: "Artifact"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateEdgeBuilder 信息: srcVertex {
+  annotations {
+    pid: "6846"
+    egid: "89"
+    euid: "89"
+    gid: "89"
+    uid: "89"
+    name: "qmgr"
+    ppid: "6844"
+    seenTime: "1562325067.460"
+    unit: "0"
+    source: "syscall"
+    type: "Process"
+  }
+}
+destVertex {
+  annotations {
+    epoch: "0"
+    fd: "11"
+    subtype: "unknown"
+    tgid: "6846"
+    source: "syscall"
+    type: "Artifact"
+  }
+}
+annotations {
+  eventId: "1952"
+  operation: "read"
+  size: "1"
+  time: "1562325067.461"
+  source: "syscall"
+  type: "Used"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: current process event number = 5
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=PROCTITLE msg=audit(1562325381.563:1953): proctitle="/usr/sbin/chronyd"
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=SYSCALL msg=audit(1562325381.563:1954): arch=c000003e syscall=72 success=yes exit=0 a0=4 a1=2 a2=1 a3=0 items=0 ppid=1 pid=6121 auid=4294967295 uid=998 gid=996 euid=998 suid=998 fsuid=998 egid=996 sgid=996 fsgid=996 tty=(none) ses=4294967295 comm="chronyd" exe="/usr/sbin/chronyd" subj=system_u:system_r:chronyd_t:s0 key=(null)
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=PROCTITLE msg=audit(1562325381.563:1954): proctitle="/usr/sbin/chronyd"
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=USER msg=audit(1562325381.563:1955): netio_intercepted="syscall=42 exit=0 success=1 fd=4 pid=6121 ppid=1 uid=998 euid=998 suid=998 fsuid=998 gid=996 egid=996 sgid=996 fsgid=996 comm=6368726F6E7964 sock_type=2 local_saddr=0200ADCAC0A80A0D0000000000000000 remote_saddr=0200007B334B11DB0000000000000000 remote_saddr_size=16"
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=USER msg=audit(1562325381.563:1956): netio_intercepted="syscall=46 exit=48 success=1 fd=4 pid=6121 ppid=1 uid=998 euid=998 suid=998 fsuid=998 gid=996 egid=996 sgid=996 fsgid=996 comm=6368726F6E7964 sock_type=2 local_saddr=0200ADCAC0A80A0D0000000000000000 remote_saddr= remote_saddr_size=0"
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: starting to put edge
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  remoteAddress: "51.75.17.219"
+  remotePort: "123"
+  epoch: "0"
+  protocol: "udp"
+  localAddress: "192.168.10.13"
+  localPort: "44490"
+  subtype: "network socket"
+  source: "syscall"
+  type: "Artifact"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  pid: "6121"
+  egid: "996"
+  euid: "998"
+  gid: "996"
+  uid: "998"
+  name: "chronyd"
+  ppid: "1"
+  seenTime: "1562325037.128"
+  unit: "0"
+  source: "syscall"
+  type: "Process"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateEdgeBuilder 信息: srcVertex {
+  annotations {
+    remoteAddress: "51.75.17.219"
+    remotePort: "123"
+    epoch: "0"
+    protocol: "udp"
+    localAddress: "192.168.10.13"
+    localPort: "44490"
+    subtype: "network socket"
+    source: "syscall"
+    type: "Artifact"
+  }
+}
+destVertex {
+  annotations {
+    pid: "6121"
+    egid: "996"
+    euid: "998"
+    gid: "996"
+    uid: "998"
+    name: "chronyd"
+    ppid: "1"
+    seenTime: "1562325037.128"
+    unit: "0"
+    source: "syscall"
+    type: "Process"
+  }
+}
+annotations {
+  eventId: "1955"
+  operation: "connect"
+  time: "1562325381.563"
+  source: "syscall"
+  type: "WasGeneratedBy"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: current process event number = 6
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=SYSCALL msg=audit(1562325381.826:1957): arch=c000003e syscall=3 success=yes exit=0 a0=4 a1=5 a2=18 a3=55c0d9ed0520 items=0 ppid=1 pid=6121 auid=4294967295 uid=998 gid=996 euid=998 suid=998 fsuid=998 egid=996 sgid=996 fsgid=996 tty=(none) ses=4294967295 comm="chronyd" exe="/usr/sbin/chronyd" subj=system_u:system_r:chronyd_t:s0 key=(null)
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: starting to put edge
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  remoteAddress: "51.75.17.219"
+  remotePort: "123"
+  epoch: "1"
+  protocol: "udp"
+  localAddress: "192.168.10.13"
+  localPort: "44490"
+  subtype: "network socket"
+  source: "syscall"
+  type: "Artifact"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  pid: "6121"
+  egid: "996"
+  euid: "998"
+  gid: "996"
+  uid: "998"
+  name: "chronyd"
+  ppid: "1"
+  seenTime: "1562325037.128"
+  unit: "0"
+  source: "syscall"
+  type: "Process"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateEdgeBuilder 信息: srcVertex {
+  annotations {
+    remoteAddress: "51.75.17.219"
+    remotePort: "123"
+    epoch: "1"
+    protocol: "udp"
+    localAddress: "192.168.10.13"
+    localPort: "44490"
+    subtype: "network socket"
+    source: "syscall"
+    type: "Artifact"
+  }
+}
+destVertex {
+  annotations {
+    pid: "6121"
+    egid: "996"
+    euid: "998"
+    gid: "996"
+    uid: "998"
+    name: "chronyd"
+    ppid: "1"
+    seenTime: "1562325037.128"
+    unit: "0"
+    source: "syscall"
+    type: "Process"
+  }
+}
+annotations {
+  eventId: "1956"
+  operation: "send"
+  size: "48"
+  time: "1562325381.563"
+  source: "syscall"
+  type: "WasGeneratedBy"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: current process event number = 7
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=PROCTITLE msg=audit(1562325381.826:1957): proctitle="/usr/sbin/chronyd"
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=SYSCALL msg=audit(1562325400.463:1958): arch=c000003e syscall=1 success=yes exit=1 a0=c a1=5654f73954ec a2=1 a3=13382a8 items=0 ppid=6844 pid=6846 auid=4294967295 uid=89 gid=89 euid=89 suid=89 fsuid=89 egid=89 sgid=89 fsgid=89 tty=(none) ses=4294967295 comm="qmgr" exe="/usr/libexec/postfix/qmgr" subj=system_u:system_r:postfix_qmgr_t:s0 key=(null)
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: starting to put edge
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  remoteAddress: "51.75.17.219"
+  remotePort: "123"
+  epoch: "1"
+  protocol: "udp"
+  localAddress: "192.168.10.13"
+  localPort: "44490"
+  subtype: "network socket"
+  source: "syscall"
+  type: "Artifact"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  pid: "6121"
+  egid: "996"
+  euid: "998"
+  gid: "996"
+  uid: "998"
+  name: "chronyd"
+  ppid: "1"
+  seenTime: "1562325037.128"
+  unit: "0"
+  source: "syscall"
+  type: "Process"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateEdgeBuilder 信息: srcVertex {
+  annotations {
+    remoteAddress: "51.75.17.219"
+    remotePort: "123"
+    epoch: "1"
+    protocol: "udp"
+    localAddress: "192.168.10.13"
+    localPort: "44490"
+    subtype: "network socket"
+    source: "syscall"
+    type: "Artifact"
+  }
+}
+destVertex {
+  annotations {
+    pid: "6121"
+    egid: "996"
+    euid: "998"
+    gid: "996"
+    uid: "998"
+    name: "chronyd"
+    ppid: "1"
+    seenTime: "1562325037.128"
+    unit: "0"
+    source: "syscall"
+    type: "Process"
+  }
+}
+annotations {
+  eventId: "1957"
+  operation: "close"
+  time: "1562325381.826"
+  source: "syscall"
+  type: "WasGeneratedBy"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: current process event number = 8
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=PROCTITLE msg=audit(1562325400.463:1958): proctitle=716D6772002D6C002D7400756E6978002D75
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=SYSCALL msg=audit(1562325400.463:1959): arch=c000003e syscall=0 success=yes exit=1 a0=b a1=7ffdaa493557 a2=1 a3=12e6de0 items=0 ppid=6844 pid=6846 auid=4294967295 uid=89 gid=89 euid=89 suid=89 fsuid=89 egid=89 sgid=89 fsgid=89 tty=(none) ses=4294967295 comm="qmgr" exe="/usr/libexec/postfix/qmgr" subj=system_u:system_r:postfix_qmgr_t:s0 key=(null)
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: starting to put edge
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  epoch: "0"
+  fd: "12"
+  subtype: "unknown"
+  tgid: "6846"
+  source: "syscall"
+  type: "Artifact"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  pid: "6846"
+  egid: "89"
+  euid: "89"
+  gid: "89"
+  uid: "89"
+  name: "qmgr"
+  ppid: "6844"
+  seenTime: "1562325067.460"
+  unit: "0"
+  source: "syscall"
+  type: "Process"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateEdgeBuilder 信息: srcVertex {
+  annotations {
+    epoch: "0"
+    fd: "12"
+    subtype: "unknown"
+    tgid: "6846"
+    source: "syscall"
+    type: "Artifact"
+  }
+}
+destVertex {
+  annotations {
+    pid: "6846"
+    egid: "89"
+    euid: "89"
+    gid: "89"
+    uid: "89"
+    name: "qmgr"
+    ppid: "6844"
+    seenTime: "1562325067.460"
+    unit: "0"
+    source: "syscall"
+    type: "Process"
+  }
+}
+annotations {
+  eventId: "1958"
+  operation: "write"
+  size: "1"
+  time: "1562325400.463"
+  source: "syscall"
+  type: "WasGeneratedBy"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: current process event number = 9
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=PROCTITLE msg=audit(1562325400.463:1959): proctitle=716D6772002D6C002D7400756E6978002D75
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=SYSCALL msg=audit(1562325509.305:1960): arch=c000003e syscall=72 success=yes exit=0 a0=4 a1=1 a2=0 a3=0 items=0 ppid=1 pid=6121 auid=4294967295 uid=998 gid=996 euid=998 suid=998 fsuid=998 egid=996 sgid=996 fsgid=996 tty=(none) ses=4294967295 comm="chronyd" exe="/usr/sbin/chronyd" subj=system_u:system_r:chronyd_t:s0 key=(null)
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: starting to put edge
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  pid: "6846"
+  egid: "89"
+  euid: "89"
+  gid: "89"
+  uid: "89"
+  name: "qmgr"
+  ppid: "6844"
+  seenTime: "1562325067.460"
+  unit: "0"
+  source: "syscall"
+  type: "Process"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  epoch: "0"
+  fd: "11"
+  subtype: "unknown"
+  tgid: "6846"
+  source: "syscall"
+  type: "Artifact"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateEdgeBuilder 信息: srcVertex {
+  annotations {
+    pid: "6846"
+    egid: "89"
+    euid: "89"
+    gid: "89"
+    uid: "89"
+    name: "qmgr"
+    ppid: "6844"
+    seenTime: "1562325067.460"
+    unit: "0"
+    source: "syscall"
+    type: "Process"
+  }
+}
+destVertex {
+  annotations {
+    epoch: "0"
+    fd: "11"
+    subtype: "unknown"
+    tgid: "6846"
+    source: "syscall"
+    type: "Artifact"
+  }
+}
+annotations {
+  eventId: "1959"
+  operation: "read"
+  size: "1"
+  time: "1562325400.463"
+  source: "syscall"
+  type: "Used"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: current process event number = 10
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=PROCTITLE msg=audit(1562325509.305:1960): proctitle="/usr/sbin/chronyd"
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=SYSCALL msg=audit(1562325509.305:1961): arch=c000003e syscall=72 success=yes exit=0 a0=4 a1=2 a2=1 a3=0 items=0 ppid=1 pid=6121 auid=4294967295 uid=998 gid=996 euid=998 suid=998 fsuid=998 egid=996 sgid=996 fsgid=996 tty=(none) ses=4294967295 comm="chronyd" exe="/usr/sbin/chronyd" subj=system_u:system_r:chronyd_t:s0 key=(null)
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=PROCTITLE msg=audit(1562325509.305:1961): proctitle="/usr/sbin/chronyd"
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=USER msg=audit(1562325509.305:1962): netio_intercepted="syscall=42 exit=0 success=1 fd=4 pid=6121 ppid=1 uid=998 euid=998 suid=998 fsuid=998 gid=996 egid=996 sgid=996 fsgid=996 comm=6368726F6E7964 sock_type=2 local_saddr=0200D7B7C0A80A0D0000000000000000 remote_saddr=0200007B781973140000000000000000 remote_saddr_size=16"
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=USER msg=audit(1562325509.305:1963): netio_intercepted="syscall=46 exit=48 success=1 fd=4 pid=6121 ppid=1 uid=998 euid=998 suid=998 fsuid=998 gid=996 egid=996 sgid=996 fsgid=996 comm=6368726F6E7964 sock_type=2 local_saddr=0200D7B7C0A80A0D0000000000000000 remote_saddr= remote_saddr_size=0"
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: starting to put edge
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  remoteAddress: "120.25.115.20"
+  remotePort: "123"
+  epoch: "0"
+  protocol: "udp"
+  localAddress: "192.168.10.13"
+  localPort: "55223"
+  subtype: "network socket"
+  source: "syscall"
+  type: "Artifact"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  pid: "6121"
+  egid: "996"
+  euid: "998"
+  gid: "996"
+  uid: "998"
+  name: "chronyd"
+  ppid: "1"
+  seenTime: "1562325037.128"
+  unit: "0"
+  source: "syscall"
+  type: "Process"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateEdgeBuilder 信息: srcVertex {
+  annotations {
+    remoteAddress: "120.25.115.20"
+    remotePort: "123"
+    epoch: "0"
+    protocol: "udp"
+    localAddress: "192.168.10.13"
+    localPort: "55223"
+    subtype: "network socket"
+    source: "syscall"
+    type: "Artifact"
+  }
+}
+destVertex {
+  annotations {
+    pid: "6121"
+    egid: "996"
+    euid: "998"
+    gid: "996"
+    uid: "998"
+    name: "chronyd"
+    ppid: "1"
+    seenTime: "1562325037.128"
+    unit: "0"
+    source: "syscall"
+    type: "Process"
+  }
+}
+annotations {
+  eventId: "1962"
+  operation: "connect"
+  time: "1562325509.305"
+  source: "syscall"
+  type: "WasGeneratedBy"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: current process event number = 11
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=SYSCALL msg=audit(1562325509.340:1964): arch=c000003e syscall=3 success=yes exit=0 a0=4 a1=5 a2=18 a3=55c0d9ed0520 items=0 ppid=1 pid=6121 auid=4294967295 uid=998 gid=996 euid=998 suid=998 fsuid=998 egid=996 sgid=996 fsgid=996 tty=(none) ses=4294967295 comm="chronyd" exe="/usr/sbin/chronyd" subj=system_u:system_r:chronyd_t:s0 key=(null)
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: starting to put edge
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  remoteAddress: "120.25.115.20"
+  remotePort: "123"
+  epoch: "1"
+  protocol: "udp"
+  localAddress: "192.168.10.13"
+  localPort: "55223"
+  subtype: "network socket"
+  source: "syscall"
+  type: "Artifact"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  pid: "6121"
+  egid: "996"
+  euid: "998"
+  gid: "996"
+  uid: "998"
+  name: "chronyd"
+  ppid: "1"
+  seenTime: "1562325037.128"
+  unit: "0"
+  source: "syscall"
+  type: "Process"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateEdgeBuilder 信息: srcVertex {
+  annotations {
+    remoteAddress: "120.25.115.20"
+    remotePort: "123"
+    epoch: "1"
+    protocol: "udp"
+    localAddress: "192.168.10.13"
+    localPort: "55223"
+    subtype: "network socket"
+    source: "syscall"
+    type: "Artifact"
+  }
+}
+destVertex {
+  annotations {
+    pid: "6121"
+    egid: "996"
+    euid: "998"
+    gid: "996"
+    uid: "998"
+    name: "chronyd"
+    ppid: "1"
+    seenTime: "1562325037.128"
+    unit: "0"
+    source: "syscall"
+    type: "Process"
+  }
+}
+annotations {
+  eventId: "1963"
+  operation: "send"
+  size: "48"
+  time: "1562325509.305"
+  source: "syscall"
+  type: "WasGeneratedBy"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: current process event number = 12
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=PROCTITLE msg=audit(1562325509.340:1964): proctitle="/usr/sbin/chronyd"
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=SYSCALL msg=audit(1562325554.016:1965): arch=c000003e syscall=72 success=yes exit=0 a0=4 a1=1 a2=0 a3=0 items=0 ppid=1 pid=6121 auid=4294967295 uid=998 gid=996 euid=998 suid=998 fsuid=998 egid=996 sgid=996 fsgid=996 tty=(none) ses=4294967295 comm="chronyd" exe="/usr/sbin/chronyd" subj=system_u:system_r:chronyd_t:s0 key=(null)
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: starting to put edge
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  remoteAddress: "120.25.115.20"
+  remotePort: "123"
+  epoch: "1"
+  protocol: "udp"
+  localAddress: "192.168.10.13"
+  localPort: "55223"
+  subtype: "network socket"
+  source: "syscall"
+  type: "Artifact"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  pid: "6121"
+  egid: "996"
+  euid: "998"
+  gid: "996"
+  uid: "998"
+  name: "chronyd"
+  ppid: "1"
+  seenTime: "1562325037.128"
+  unit: "0"
+  source: "syscall"
+  type: "Process"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateEdgeBuilder 信息: srcVertex {
+  annotations {
+    remoteAddress: "120.25.115.20"
+    remotePort: "123"
+    epoch: "1"
+    protocol: "udp"
+    localAddress: "192.168.10.13"
+    localPort: "55223"
+    subtype: "network socket"
+    source: "syscall"
+    type: "Artifact"
+  }
+}
+destVertex {
+  annotations {
+    pid: "6121"
+    egid: "996"
+    euid: "998"
+    gid: "996"
+    uid: "998"
+    name: "chronyd"
+    ppid: "1"
+    seenTime: "1562325037.128"
+    unit: "0"
+    source: "syscall"
+    type: "Process"
+  }
+}
+annotations {
+  eventId: "1964"
+  operation: "close"
+  time: "1562325509.340"
+  source: "syscall"
+  type: "WasGeneratedBy"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: current process event number = 13
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=PROCTITLE msg=audit(1562325554.016:1965): proctitle="/usr/sbin/chronyd"
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=SYSCALL msg=audit(1562325554.016:1966): arch=c000003e syscall=72 success=yes exit=0 a0=4 a1=2 a2=1 a3=0 items=0 ppid=1 pid=6121 auid=4294967295 uid=998 gid=996 euid=998 suid=998 fsuid=998 egid=996 sgid=996 fsgid=996 tty=(none) ses=4294967295 comm="chronyd" exe="/usr/sbin/chronyd" subj=system_u:system_r:chronyd_t:s0 key=(null)
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=PROCTITLE msg=audit(1562325554.016:1966): proctitle="/usr/sbin/chronyd"
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=USER msg=audit(1562325554.016:1967): netio_intercepted="syscall=42 exit=0 success=1 fd=4 pid=6121 ppid=1 uid=998 euid=998 suid=998 fsuid=998 gid=996 egid=996 sgid=996 fsgid=996 comm=6368726F6E7964 sock_type=2 local_saddr=0200914FC0A80A0D0000000000000000 remote_saddr=0200007B52C5BC820000000000000000 remote_saddr_size=16"
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=USER msg=audit(1562325554.016:1968): netio_intercepted="syscall=46 exit=48 success=1 fd=4 pid=6121 ppid=1 uid=998 euid=998 suid=998 fsuid=998 gid=996 egid=996 sgid=996 fsgid=996 comm=6368726F6E7964 sock_type=2 local_saddr=0200914FC0A80A0D0000000000000000 remote_saddr= remote_saddr_size=0"
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: starting to put edge
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  remoteAddress: "82.197.188.130"
+  remotePort: "123"
+  epoch: "0"
+  protocol: "udp"
+  localAddress: "192.168.10.13"
+  localPort: "37199"
+  subtype: "network socket"
+  source: "syscall"
+  type: "Artifact"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  pid: "6121"
+  egid: "996"
+  euid: "998"
+  gid: "996"
+  uid: "998"
+  name: "chronyd"
+  ppid: "1"
+  seenTime: "1562325037.128"
+  unit: "0"
+  source: "syscall"
+  type: "Process"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateEdgeBuilder 信息: srcVertex {
+  annotations {
+    remoteAddress: "82.197.188.130"
+    remotePort: "123"
+    epoch: "0"
+    protocol: "udp"
+    localAddress: "192.168.10.13"
+    localPort: "37199"
+    subtype: "network socket"
+    source: "syscall"
+    type: "Artifact"
+  }
+}
+destVertex {
+  annotations {
+    pid: "6121"
+    egid: "996"
+    euid: "998"
+    gid: "996"
+    uid: "998"
+    name: "chronyd"
+    ppid: "1"
+    seenTime: "1562325037.128"
+    unit: "0"
+    source: "syscall"
+    type: "Process"
+  }
+}
+annotations {
+  eventId: "1967"
+  operation: "connect"
+  time: "1562325554.016"
+  source: "syscall"
+  type: "WasGeneratedBy"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: current process event number = 14
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=SYSCALL msg=audit(1562325554.228:1969): arch=c000003e syscall=3 success=yes exit=0 a0=4 a1=5 a2=18 a3=55c0d9ed0520 items=0 ppid=1 pid=6121 auid=4294967295 uid=998 gid=996 euid=998 suid=998 fsuid=998 egid=996 sgid=996 fsgid=996 tty=(none) ses=4294967295 comm="chronyd" exe="/usr/sbin/chronyd" subj=system_u:system_r:chronyd_t:s0 key=(null)
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: starting to put edge
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  remoteAddress: "82.197.188.130"
+  remotePort: "123"
+  epoch: "1"
+  protocol: "udp"
+  localAddress: "192.168.10.13"
+  localPort: "37199"
+  subtype: "network socket"
+  source: "syscall"
+  type: "Artifact"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  pid: "6121"
+  egid: "996"
+  euid: "998"
+  gid: "996"
+  uid: "998"
+  name: "chronyd"
+  ppid: "1"
+  seenTime: "1562325037.128"
+  unit: "0"
+  source: "syscall"
+  type: "Process"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateEdgeBuilder 信息: srcVertex {
+  annotations {
+    remoteAddress: "82.197.188.130"
+    remotePort: "123"
+    epoch: "1"
+    protocol: "udp"
+    localAddress: "192.168.10.13"
+    localPort: "37199"
+    subtype: "network socket"
+    source: "syscall"
+    type: "Artifact"
+  }
+}
+destVertex {
+  annotations {
+    pid: "6121"
+    egid: "996"
+    euid: "998"
+    gid: "996"
+    uid: "998"
+    name: "chronyd"
+    ppid: "1"
+    seenTime: "1562325037.128"
+    unit: "0"
+    source: "syscall"
+    type: "Process"
+  }
+}
+annotations {
+  eventId: "1968"
+  operation: "send"
+  size: "48"
+  time: "1562325554.016"
+  source: "syscall"
+  type: "WasGeneratedBy"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: current process event number = 15
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=PROCTITLE msg=audit(1562325554.228:1969): proctitle="/usr/sbin/chronyd"
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=SYSCALL msg=audit(1562325733.465:1970): arch=c000003e syscall=1 success=yes exit=1 a0=c a1=5654f73954ec a2=1 a3=12e6de0 items=0 ppid=6844 pid=6846 auid=4294967295 uid=89 gid=89 euid=89 suid=89 fsuid=89 egid=89 sgid=89 fsgid=89 tty=(none) ses=4294967295 comm="qmgr" exe="/usr/libexec/postfix/qmgr" subj=system_u:system_r:postfix_qmgr_t:s0 key=(null)
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: starting to put edge
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  remoteAddress: "82.197.188.130"
+  remotePort: "123"
+  epoch: "1"
+  protocol: "udp"
+  localAddress: "192.168.10.13"
+  localPort: "37199"
+  subtype: "network socket"
+  source: "syscall"
+  type: "Artifact"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  pid: "6121"
+  egid: "996"
+  euid: "998"
+  gid: "996"
+  uid: "998"
+  name: "chronyd"
+  ppid: "1"
+  seenTime: "1562325037.128"
+  unit: "0"
+  source: "syscall"
+  type: "Process"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateEdgeBuilder 信息: srcVertex {
+  annotations {
+    remoteAddress: "82.197.188.130"
+    remotePort: "123"
+    epoch: "1"
+    protocol: "udp"
+    localAddress: "192.168.10.13"
+    localPort: "37199"
+    subtype: "network socket"
+    source: "syscall"
+    type: "Artifact"
+  }
+}
+destVertex {
+  annotations {
+    pid: "6121"
+    egid: "996"
+    euid: "998"
+    gid: "996"
+    uid: "998"
+    name: "chronyd"
+    ppid: "1"
+    seenTime: "1562325037.128"
+    unit: "0"
+    source: "syscall"
+    type: "Process"
+  }
+}
+annotations {
+  eventId: "1969"
+  operation: "close"
+  time: "1562325554.228"
+  source: "syscall"
+  type: "WasGeneratedBy"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: current process event number = 16
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=PROCTITLE msg=audit(1562325733.465:1970): proctitle=716D6772002D6C002D7400756E6978002D75
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=SYSCALL msg=audit(1562325733.465:1971): arch=c000003e syscall=0 success=yes exit=1 a0=b a1=7ffdaa493557 a2=1 a3=1295918 items=0 ppid=6844 pid=6846 auid=4294967295 uid=89 gid=89 euid=89 suid=89 fsuid=89 egid=89 sgid=89 fsgid=89 tty=(none) ses=4294967295 comm="qmgr" exe="/usr/libexec/postfix/qmgr" subj=system_u:system_r:postfix_qmgr_t:s0 key=(null)
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: starting to put edge
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  epoch: "0"
+  fd: "12"
+  subtype: "unknown"
+  tgid: "6846"
+  source: "syscall"
+  type: "Artifact"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  pid: "6846"
+  egid: "89"
+  euid: "89"
+  gid: "89"
+  uid: "89"
+  name: "qmgr"
+  ppid: "6844"
+  seenTime: "1562325067.460"
+  unit: "0"
+  source: "syscall"
+  type: "Process"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateEdgeBuilder 信息: srcVertex {
+  annotations {
+    epoch: "0"
+    fd: "12"
+    subtype: "unknown"
+    tgid: "6846"
+    source: "syscall"
+    type: "Artifact"
+  }
+}
+destVertex {
+  annotations {
+    pid: "6846"
+    egid: "89"
+    euid: "89"
+    gid: "89"
+    uid: "89"
+    name: "qmgr"
+    ppid: "6844"
+    seenTime: "1562325067.460"
+    unit: "0"
+    source: "syscall"
+    type: "Process"
+  }
+}
+annotations {
+  eventId: "1970"
+  operation: "write"
+  size: "1"
+  time: "1562325733.465"
+  source: "syscall"
+  type: "WasGeneratedBy"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: current process event number = 17
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=PROCTITLE msg=audit(1562325733.465:1971): proctitle=716D6772002D6C002D7400756E6978002D75
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=SYSCALL msg=audit(1562326063.479:1972): arch=c000003e syscall=72 success=yes exit=0 a0=4 a1=1 a2=0 a3=0 items=0 ppid=1 pid=6121 auid=4294967295 uid=998 gid=996 euid=998 suid=998 fsuid=998 egid=996 sgid=996 fsgid=996 tty=(none) ses=4294967295 comm="chronyd" exe="/usr/sbin/chronyd" subj=system_u:system_r:chronyd_t:s0 key=(null)
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: starting to put edge
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  pid: "6846"
+  egid: "89"
+  euid: "89"
+  gid: "89"
+  uid: "89"
+  name: "qmgr"
+  ppid: "6844"
+  seenTime: "1562325067.460"
+  unit: "0"
+  source: "syscall"
+  type: "Process"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  epoch: "0"
+  fd: "11"
+  subtype: "unknown"
+  tgid: "6846"
+  source: "syscall"
+  type: "Artifact"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateEdgeBuilder 信息: srcVertex {
+  annotations {
+    pid: "6846"
+    egid: "89"
+    euid: "89"
+    gid: "89"
+    uid: "89"
+    name: "qmgr"
+    ppid: "6844"
+    seenTime: "1562325067.460"
+    unit: "0"
+    source: "syscall"
+    type: "Process"
+  }
+}
+destVertex {
+  annotations {
+    epoch: "0"
+    fd: "11"
+    subtype: "unknown"
+    tgid: "6846"
+    source: "syscall"
+    type: "Artifact"
+  }
+}
+annotations {
+  eventId: "1971"
+  operation: "read"
+  size: "1"
+  time: "1562325733.465"
+  source: "syscall"
+  type: "Used"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: current process event number = 18
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=PROCTITLE msg=audit(1562326063.479:1972): proctitle="/usr/sbin/chronyd"
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=SYSCALL msg=audit(1562326063.479:1973): arch=c000003e syscall=72 success=yes exit=0 a0=4 a1=2 a2=1 a3=0 items=0 ppid=1 pid=6121 auid=4294967295 uid=998 gid=996 euid=998 suid=998 fsuid=998 egid=996 sgid=996 fsgid=996 tty=(none) ses=4294967295 comm="chronyd" exe="/usr/sbin/chronyd" subj=system_u:system_r:chronyd_t:s0 key=(null)
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=PROCTITLE msg=audit(1562326063.479:1973): proctitle="/usr/sbin/chronyd"
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=USER msg=audit(1562326063.479:1974): netio_intercepted="syscall=42 exit=0 success=1 fd=4 pid=6121 ppid=1 uid=998 euid=998 suid=998 fsuid=998 gid=996 egid=996 sgid=996 fsgid=996 comm=6368726F6E7964 sock_type=2 local_saddr=0200CA65C0A80A0D0000000000000000 remote_saddr=0200007B4E2E66B40000000000000000 remote_saddr_size=16"
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=USER msg=audit(1562326063.480:1975): netio_intercepted="syscall=46 exit=48 success=1 fd=4 pid=6121 ppid=1 uid=998 euid=998 suid=998 fsuid=998 gid=996 egid=996 sgid=996 fsgid=996 comm=6368726F6E7964 sock_type=2 local_saddr=0200CA65C0A80A0D0000000000000000 remote_saddr= remote_saddr_size=0"
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: starting to put edge
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  remoteAddress: "78.46.102.180"
+  remotePort: "123"
+  epoch: "0"
+  protocol: "udp"
+  localAddress: "192.168.10.13"
+  localPort: "51813"
+  subtype: "network socket"
+  source: "syscall"
+  type: "Artifact"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  pid: "6121"
+  egid: "996"
+  euid: "998"
+  gid: "996"
+  uid: "998"
+  name: "chronyd"
+  ppid: "1"
+  seenTime: "1562325037.128"
+  unit: "0"
+  source: "syscall"
+  type: "Process"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateEdgeBuilder 信息: srcVertex {
+  annotations {
+    remoteAddress: "78.46.102.180"
+    remotePort: "123"
+    epoch: "0"
+    protocol: "udp"
+    localAddress: "192.168.10.13"
+    localPort: "51813"
+    subtype: "network socket"
+    source: "syscall"
+    type: "Artifact"
+  }
+}
+destVertex {
+  annotations {
+    pid: "6121"
+    egid: "996"
+    euid: "998"
+    gid: "996"
+    uid: "998"
+    name: "chronyd"
+    ppid: "1"
+    seenTime: "1562325037.128"
+    unit: "0"
+    source: "syscall"
+    type: "Process"
+  }
+}
+annotations {
+  eventId: "1974"
+  operation: "connect"
+  time: "1562326063.479"
+  source: "syscall"
+  type: "WasGeneratedBy"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: current process event number = 19
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=SYSCALL msg=audit(1562326066.468:1976): arch=c000003e syscall=1 success=yes exit=1 a0=c a1=5654f73954ec a2=1 a3=1295918 items=0 ppid=6844 pid=6846 auid=4294967295 uid=89 gid=89 euid=89 suid=89 fsuid=89 egid=89 sgid=89 fsgid=89 tty=(none) ses=4294967295 comm="qmgr" exe="/usr/libexec/postfix/qmgr" subj=system_u:system_r:postfix_qmgr_t:s0 key=(null)
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: starting to put edge
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  remoteAddress: "78.46.102.180"
+  remotePort: "123"
+  epoch: "1"
+  protocol: "udp"
+  localAddress: "192.168.10.13"
+  localPort: "51813"
+  subtype: "network socket"
+  source: "syscall"
+  type: "Artifact"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  pid: "6121"
+  egid: "996"
+  euid: "998"
+  gid: "996"
+  uid: "998"
+  name: "chronyd"
+  ppid: "1"
+  seenTime: "1562325037.128"
+  unit: "0"
+  source: "syscall"
+  type: "Process"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateEdgeBuilder 信息: srcVertex {
+  annotations {
+    remoteAddress: "78.46.102.180"
+    remotePort: "123"
+    epoch: "1"
+    protocol: "udp"
+    localAddress: "192.168.10.13"
+    localPort: "51813"
+    subtype: "network socket"
+    source: "syscall"
+    type: "Artifact"
+  }
+}
+destVertex {
+  annotations {
+    pid: "6121"
+    egid: "996"
+    euid: "998"
+    gid: "996"
+    uid: "998"
+    name: "chronyd"
+    ppid: "1"
+    seenTime: "1562325037.128"
+    unit: "0"
+    source: "syscall"
+    type: "Process"
+  }
+}
+annotations {
+  eventId: "1975"
+  operation: "send"
+  size: "48"
+  time: "1562326063.480"
+  source: "syscall"
+  type: "WasGeneratedBy"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: current process event number = 20
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=PROCTITLE msg=audit(1562326066.468:1976): proctitle=716D6772002D6C002D7400756E6978002D75
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=SYSCALL msg=audit(1562326066.468:1977): arch=c000003e syscall=0 success=yes exit=1 a0=b a1=7ffdaa493557 a2=1 a3=1244450 items=0 ppid=6844 pid=6846 auid=4294967295 uid=89 gid=89 euid=89 suid=89 fsuid=89 egid=89 sgid=89 fsgid=89 tty=(none) ses=4294967295 comm="qmgr" exe="/usr/libexec/postfix/qmgr" subj=system_u:system_r:postfix_qmgr_t:s0 key=(null)
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: starting to put edge
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  epoch: "0"
+  fd: "12"
+  subtype: "unknown"
+  tgid: "6846"
+  source: "syscall"
+  type: "Artifact"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  pid: "6846"
+  egid: "89"
+  euid: "89"
+  gid: "89"
+  uid: "89"
+  name: "qmgr"
+  ppid: "6844"
+  seenTime: "1562325067.460"
+  unit: "0"
+  source: "syscall"
+  type: "Process"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateEdgeBuilder 信息: srcVertex {
+  annotations {
+    epoch: "0"
+    fd: "12"
+    subtype: "unknown"
+    tgid: "6846"
+    source: "syscall"
+    type: "Artifact"
+  }
+}
+destVertex {
+  annotations {
+    pid: "6846"
+    egid: "89"
+    euid: "89"
+    gid: "89"
+    uid: "89"
+    name: "qmgr"
+    ppid: "6844"
+    seenTime: "1562325067.460"
+    unit: "0"
+    source: "syscall"
+    type: "Process"
+  }
+}
+annotations {
+  eventId: "1976"
+  operation: "write"
+  size: "1"
+  time: "1562326066.468"
+  source: "syscall"
+  type: "WasGeneratedBy"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: current process event number = 21
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=PROCTITLE msg=audit(1562326066.468:1977): proctitle=716D6772002D6C002D7400756E6978002D75
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=SYSCALL msg=audit(1562326070.482:1978): arch=c000003e syscall=3 success=yes exit=0 a0=4 a1=5 a2=18 a3=7ffcd010ca60 items=0 ppid=1 pid=6121 auid=4294967295 uid=998 gid=996 euid=998 suid=998 fsuid=998 egid=996 sgid=996 fsgid=996 tty=(none) ses=4294967295 comm="chronyd" exe="/usr/sbin/chronyd" subj=system_u:system_r:chronyd_t:s0 key=(null)
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: starting to put edge
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  pid: "6846"
+  egid: "89"
+  euid: "89"
+  gid: "89"
+  uid: "89"
+  name: "qmgr"
+  ppid: "6844"
+  seenTime: "1562325067.460"
+  unit: "0"
+  source: "syscall"
+  type: "Process"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  epoch: "0"
+  fd: "11"
+  subtype: "unknown"
+  tgid: "6846"
+  source: "syscall"
+  type: "Artifact"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateEdgeBuilder 信息: srcVertex {
+  annotations {
+    pid: "6846"
+    egid: "89"
+    euid: "89"
+    gid: "89"
+    uid: "89"
+    name: "qmgr"
+    ppid: "6844"
+    seenTime: "1562325067.460"
+    unit: "0"
+    source: "syscall"
+    type: "Process"
+  }
+}
+destVertex {
+  annotations {
+    epoch: "0"
+    fd: "11"
+    subtype: "unknown"
+    tgid: "6846"
+    source: "syscall"
+    type: "Artifact"
+  }
+}
+annotations {
+  eventId: "1977"
+  operation: "read"
+  size: "1"
+  time: "1562326066.468"
+  source: "syscall"
+  type: "Used"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: current process event number = 22
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=PROCTITLE msg=audit(1562326070.482:1978): proctitle="/usr/sbin/chronyd"
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=SYSCALL msg=audit(1562326399.471:1979): arch=c000003e syscall=1 success=yes exit=1 a0=c a1=5654f73954ec a2=1 a3=1244450 items=0 ppid=6844 pid=6846 auid=4294967295 uid=89 gid=89 euid=89 suid=89 fsuid=89 egid=89 sgid=89 fsgid=89 tty=(none) ses=4294967295 comm="qmgr" exe="/usr/libexec/postfix/qmgr" subj=system_u:system_r:postfix_qmgr_t:s0 key=(null)
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: starting to put edge
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  remoteAddress: "78.46.102.180"
+  remotePort: "123"
+  epoch: "1"
+  protocol: "udp"
+  localAddress: "192.168.10.13"
+  localPort: "51813"
+  subtype: "network socket"
+  source: "syscall"
+  type: "Artifact"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  pid: "6121"
+  egid: "996"
+  euid: "998"
+  gid: "996"
+  uid: "998"
+  name: "chronyd"
+  ppid: "1"
+  seenTime: "1562325037.128"
+  unit: "0"
+  source: "syscall"
+  type: "Process"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateEdgeBuilder 信息: srcVertex {
+  annotations {
+    remoteAddress: "78.46.102.180"
+    remotePort: "123"
+    epoch: "1"
+    protocol: "udp"
+    localAddress: "192.168.10.13"
+    localPort: "51813"
+    subtype: "network socket"
+    source: "syscall"
+    type: "Artifact"
+  }
+}
+destVertex {
+  annotations {
+    pid: "6121"
+    egid: "996"
+    euid: "998"
+    gid: "996"
+    uid: "998"
+    name: "chronyd"
+    ppid: "1"
+    seenTime: "1562325037.128"
+    unit: "0"
+    source: "syscall"
+    type: "Process"
+  }
+}
+annotations {
+  eventId: "1978"
+  operation: "close"
+  time: "1562326070.482"
+  source: "syscall"
+  type: "WasGeneratedBy"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: current process event number = 23
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=PROCTITLE msg=audit(1562326399.471:1979): proctitle=716D6772002D6C002D7400756E6978002D75
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=SYSCALL msg=audit(1562326399.471:1980): arch=c000003e syscall=0 success=yes exit=1 a0=b a1=7ffdaa493557 a2=1 a3=11f2f88 items=0 ppid=6844 pid=6846 auid=4294967295 uid=89 gid=89 euid=89 suid=89 fsuid=89 egid=89 sgid=89 fsgid=89 tty=(none) ses=4294967295 comm="qmgr" exe="/usr/libexec/postfix/qmgr" subj=system_u:system_r:postfix_qmgr_t:s0 key=(null)
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: starting to put edge
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  epoch: "0"
+  fd: "12"
+  subtype: "unknown"
+  tgid: "6846"
+  source: "syscall"
+  type: "Artifact"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  pid: "6846"
+  egid: "89"
+  euid: "89"
+  gid: "89"
+  uid: "89"
+  name: "qmgr"
+  ppid: "6844"
+  seenTime: "1562325067.460"
+  unit: "0"
+  source: "syscall"
+  type: "Process"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateEdgeBuilder 信息: srcVertex {
+  annotations {
+    epoch: "0"
+    fd: "12"
+    subtype: "unknown"
+    tgid: "6846"
+    source: "syscall"
+    type: "Artifact"
+  }
+}
+destVertex {
+  annotations {
+    pid: "6846"
+    egid: "89"
+    euid: "89"
+    gid: "89"
+    uid: "89"
+    name: "qmgr"
+    ppid: "6844"
+    seenTime: "1562325067.460"
+    unit: "0"
+    source: "syscall"
+    type: "Process"
+  }
+}
+annotations {
+  eventId: "1979"
+  operation: "write"
+  size: "1"
+  time: "1562326399.471"
+  source: "syscall"
+  type: "WasGeneratedBy"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: current process event number = 24
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=PROCTITLE msg=audit(1562326399.471:1980): proctitle=716D6772002D6C002D7400756E6978002D75
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=SYSCALL msg=audit(1562326418.626:1981): arch=c000003e syscall=72 success=yes exit=0 a0=4 a1=1 a2=0 a3=0 items=0 ppid=1 pid=6121 auid=4294967295 uid=998 gid=996 euid=998 suid=998 fsuid=998 egid=996 sgid=996 fsgid=996 tty=(none) ses=4294967295 comm="chronyd" exe="/usr/sbin/chronyd" subj=system_u:system_r:chronyd_t:s0 key=(null)
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: starting to put edge
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  pid: "6846"
+  egid: "89"
+  euid: "89"
+  gid: "89"
+  uid: "89"
+  name: "qmgr"
+  ppid: "6844"
+  seenTime: "1562325067.460"
+  unit: "0"
+  source: "syscall"
+  type: "Process"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  epoch: "0"
+  fd: "11"
+  subtype: "unknown"
+  tgid: "6846"
+  source: "syscall"
+  type: "Artifact"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateEdgeBuilder 信息: srcVertex {
+  annotations {
+    pid: "6846"
+    egid: "89"
+    euid: "89"
+    gid: "89"
+    uid: "89"
+    name: "qmgr"
+    ppid: "6844"
+    seenTime: "1562325067.460"
+    unit: "0"
+    source: "syscall"
+    type: "Process"
+  }
+}
+destVertex {
+  annotations {
+    epoch: "0"
+    fd: "11"
+    subtype: "unknown"
+    tgid: "6846"
+    source: "syscall"
+    type: "Artifact"
+  }
+}
+annotations {
+  eventId: "1980"
+  operation: "read"
+  size: "1"
+  time: "1562326399.471"
+  source: "syscall"
+  type: "Used"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: current process event number = 25
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=PROCTITLE msg=audit(1562326418.626:1981): proctitle="/usr/sbin/chronyd"
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=SYSCALL msg=audit(1562326418.627:1982): arch=c000003e syscall=72 success=yes exit=0 a0=4 a1=2 a2=1 a3=0 items=0 ppid=1 pid=6121 auid=4294967295 uid=998 gid=996 euid=998 suid=998 fsuid=998 egid=996 sgid=996 fsgid=996 tty=(none) ses=4294967295 comm="chronyd" exe="/usr/sbin/chronyd" subj=system_u:system_r:chronyd_t:s0 key=(null)
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=PROCTITLE msg=audit(1562326418.627:1982): proctitle="/usr/sbin/chronyd"
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=USER msg=audit(1562326418.627:1983): netio_intercepted="syscall=42 exit=0 success=1 fd=4 pid=6121 ppid=1 uid=998 euid=998 suid=998 fsuid=998 gid=996 egid=996 sgid=996 fsgid=996 comm=6368726F6E7964 sock_type=2 local_saddr=020091B8C0A80A0D0000000000000000 remote_saddr=0200007B334B11DB0000000000000000 remote_saddr_size=16"
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=USER msg=audit(1562326418.627:1984): netio_intercepted="syscall=46 exit=48 success=1 fd=4 pid=6121 ppid=1 uid=998 euid=998 suid=998 fsuid=998 gid=996 egid=996 sgid=996 fsgid=996 comm=6368726F6E7964 sock_type=2 local_saddr=020091B8C0A80A0D0000000000000000 remote_saddr= remote_saddr_size=0"
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: starting to put edge
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  remoteAddress: "51.75.17.219"
+  remotePort: "123"
+  epoch: "0"
+  protocol: "udp"
+  localAddress: "192.168.10.13"
+  localPort: "37304"
+  subtype: "network socket"
+  source: "syscall"
+  type: "Artifact"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  pid: "6121"
+  egid: "996"
+  euid: "998"
+  gid: "996"
+  uid: "998"
+  name: "chronyd"
+  ppid: "1"
+  seenTime: "1562325037.128"
+  unit: "0"
+  source: "syscall"
+  type: "Process"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateEdgeBuilder 信息: srcVertex {
+  annotations {
+    remoteAddress: "51.75.17.219"
+    remotePort: "123"
+    epoch: "0"
+    protocol: "udp"
+    localAddress: "192.168.10.13"
+    localPort: "37304"
+    subtype: "network socket"
+    source: "syscall"
+    type: "Artifact"
+  }
+}
+destVertex {
+  annotations {
+    pid: "6121"
+    egid: "996"
+    euid: "998"
+    gid: "996"
+    uid: "998"
+    name: "chronyd"
+    ppid: "1"
+    seenTime: "1562325037.128"
+    unit: "0"
+    source: "syscall"
+    type: "Process"
+  }
+}
+annotations {
+  eventId: "1983"
+  operation: "connect"
+  time: "1562326418.627"
+  source: "syscall"
+  type: "WasGeneratedBy"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: current process event number = 26
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=SYSCALL msg=audit(1562326425.631:1985): arch=c000003e syscall=3 success=yes exit=0 a0=4 a1=5 a2=18 a3=7ffcd010ca60 items=0 ppid=1 pid=6121 auid=4294967295 uid=998 gid=996 euid=998 suid=998 fsuid=998 egid=996 sgid=996 fsgid=996 tty=(none) ses=4294967295 comm="chronyd" exe="/usr/sbin/chronyd" subj=system_u:system_r:chronyd_t:s0 key=(null)
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: starting to put edge
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  remoteAddress: "51.75.17.219"
+  remotePort: "123"
+  epoch: "1"
+  protocol: "udp"
+  localAddress: "192.168.10.13"
+  localPort: "37304"
+  subtype: "network socket"
+  source: "syscall"
+  type: "Artifact"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  pid: "6121"
+  egid: "996"
+  euid: "998"
+  gid: "996"
+  uid: "998"
+  name: "chronyd"
+  ppid: "1"
+  seenTime: "1562325037.128"
+  unit: "0"
+  source: "syscall"
+  type: "Process"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateEdgeBuilder 信息: srcVertex {
+  annotations {
+    remoteAddress: "51.75.17.219"
+    remotePort: "123"
+    epoch: "1"
+    protocol: "udp"
+    localAddress: "192.168.10.13"
+    localPort: "37304"
+    subtype: "network socket"
+    source: "syscall"
+    type: "Artifact"
+  }
+}
+destVertex {
+  annotations {
+    pid: "6121"
+    egid: "996"
+    euid: "998"
+    gid: "996"
+    uid: "998"
+    name: "chronyd"
+    ppid: "1"
+    seenTime: "1562325037.128"
+    unit: "0"
+    source: "syscall"
+    type: "Process"
+  }
+}
+annotations {
+  eventId: "1984"
+  operation: "send"
+  size: "48"
+  time: "1562326418.627"
+  source: "syscall"
+  type: "WasGeneratedBy"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: current process event number = 27
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader readEventData 信息: line = node=localhost.localdomain type=PROCTITLE msg=audit(1562326425.631:1985): proctitle="/usr/sbin/chronyd"
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = false
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: starting to put edge
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  remoteAddress: "51.75.17.219"
+  remotePort: "123"
+  epoch: "1"
+  protocol: "udp"
+  localAddress: "192.168.10.13"
+  localPort: "37304"
+  subtype: "network socket"
+  source: "syscall"
+  type: "Artifact"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateVertexBuilder 信息: annotations {
+  pid: "6121"
+  egid: "996"
+  euid: "998"
+  gid: "996"
+  uid: "998"
+  name: "chronyd"
+  ppid: "1"
+  seenTime: "1562325037.128"
+  unit: "0"
+  source: "syscall"
+  type: "Process"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit generateEdgeBuilder 信息: srcVertex {
+  annotations {
+    remoteAddress: "51.75.17.219"
+    remotePort: "123"
+    epoch: "1"
+    protocol: "udp"
+    localAddress: "192.168.10.13"
+    localPort: "37304"
+    subtype: "network socket"
+    source: "syscall"
+    type: "Artifact"
+  }
+}
+destVertex {
+  annotations {
+    pid: "6121"
+    egid: "996"
+    euid: "998"
+    gid: "996"
+    uid: "998"
+    name: "chronyd"
+    ppid: "1"
+    seenTime: "1562325037.128"
+    unit: "0"
+    source: "syscall"
+    type: "Process"
+  }
+}
+annotations {
+  eventId: "1985"
+  operation: "close"
+  time: "1562326425.631"
+  source: "syscall"
+  type: "WasGeneratedBy"
+}
+
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit putEdge 信息: current process event number = 28
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: starting to get into Audit Event Reader's readEventData function
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: event Data is empty!
+七月 05, 2019 7:35:19 下午 spade.reporter.audit.AuditEventReader printStats 信息: Overall rate: 0.043 records/sec in 1,634.757 seconds. Interval rate: 557.377 records/sec in 0.122 seconds.
+七月 05, 2019 7:35:19 下午 spade.utility.Execute$Output log 信息: Command "auditctl -D" succeeded with output: [No rules].
+七月 05, 2019 7:35:19 下午 spade.utility.CommonFunctions closePrintSizeAndDeleteExternalMemoryMap 信息: Audit[ArtifactsMap]: Size of the external map on disk: 24 KB
+七月 05, 2019 7:35:19 下午 spade.utility.CommonFunctions closePrintSizeAndDeleteExternalMemoryMap 信息: ProcessManager[ProcessUnitStatesMap]: Size of the external map on disk: 24 KB
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit$2 run 信息: Exiting event reader thread for process: spadeAuditBridge
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: forcePrint = true
+七月 05, 2019 7:35:19 下午 spade.reporter.Audit printStats 信息: Internal buffer size: 0, JVM memory in use: 42MB
+七月 05, 2019 7:35:19 下午 spade.core.Kernel shutdown 信息: SPADE stopped.
