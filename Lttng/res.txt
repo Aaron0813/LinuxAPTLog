@@ -1,0 +1,58 @@
+Checking the trace for lost events...
+Timerange: [2019-11-27 17:44:15.161179469, 2019-11-27 17:44:24.190990239]
+
+Top system call latencies open (usec)
+Begin                End                  Name             Duration (usec)         Size  Proc                     PID      Filename      
+[17:44:23.963811779, 17:44:23.963837237]  openat                    25.458          N/A  irqbalance               523      /proc/interrupts (fd=6)
+[17:44:24.190360201, 17:44:24.190373758]  socket                    13.557          N/A  lttng                    30213    socket (fd=3) 
+[17:44:19.350546886, 17:44:19.350557930]  openat                    11.044          N/A  bash                     30212    /dev/tty (fd=3)
+[17:44:24.188091744, 17:44:24.188102245]  openat                    10.501          N/A  lttng                    30213    /lib/x86_64-linux-gnu/libm.so.6 (fd=3)
+[17:44:19.351296583, 17:44:19.351306000]  openat                     9.417          N/A  bash                     30212    /root/.bash_profile (fd=3)
+[17:44:24.190687325, 17:44:24.190695548]  openat                     8.223          N/A  lttng                    30213    /root/.lttngrc (fd=3)
+[17:44:23.963998000, 17:44:23.964006207]  openat                     8.207          N/A  irqbalance               523      /proc/irq/20/smp_affinity (fd=6)
+[17:44:19.351426402, 17:44:19.351434412]  openat                     8.010          N/A  bash                     30212    /root/.bash_profile (fd=3)
+[17:44:23.963938800, 17:44:23.963946650]  openat                     7.850          N/A  irqbalance               523      /proc/stat (fd=6)
+[17:44:19.351878294, 17:44:19.351886071]  openat                     7.777          N/A  bash                     30212    /root/.bash_profile (fd=3)
+[17:44:24.190731985, 17:44:24.190739623]  socket                     7.638          N/A  lttng                    30213    socket (fd=3) 
+
+Top system call latencies read (usec)
+Begin                End                  Name             Duration (usec)         Size  Proc                     PID      Filename      
+[17:44:24.190425365, 17:44:24.190611089]  recvmsg                  185.724       20   B  lttng                    30213    socket (fd=3) 
+[17:44:23.963849720, 17:44:23.963886200]  read                      36.480     1.00 KiB  irqbalance               523      /proc/interrupts (fd=6)
+[17:44:24.190851544, 17:44:24.190883101]  recvmsg                   31.557    12.85 KiB  lttng-sessiond           12031    unknown (fd=65)
+[17:44:23.963897360, 17:44:23.963925977]  read                      28.617     1.00 KiB  irqbalance               523      /proc/interrupts (fd=6)
+[17:44:24.190530752, 17:44:24.190552044]  recvmsg                   21.292    12.85 KiB  lttng-sessiond           12031    unknown (fd=65)
+[17:44:23.963950558, 17:44:23.963968329]  read                      17.771     1.00 KiB  irqbalance               523      /proc/stat (fd=6)
+[17:44:19.351176103, 17:44:19.351193610]  read                      17.507       80   B  bash                     30212    write_to_bash.sh (fd=3)
+[17:44:24.190623191, 17:44:24.190636616]  recvmsg                   13.425     4.29 KiB  lttng                    30213    socket (fd=3) 
+[17:44:18.133131520, 17:44:18.133143178]  read                      11.658       32   B  lttng-sessiond           12028    pipe:[81162] (fd=11)
+[17:44:16.133310330, 17:44:16.133321327]  read                      10.997       32   B  lttng-sessiond           12028    pipe:[81162] (fd=11)
+[17:44:22.133307277, 17:44:22.133318255]  read                      10.978       32   B  lttng-sessiond           12028    pipe:[81162] (fd=11)
+
+Top system call latencies write (usec)
+Begin                End                  Name             Duration (usec)         Size  Proc                     PID      Filename      
+[17:44:19.351994140, 17:44:19.352163798]  write                    169.658       44   B  sshd                     1225     socket:[22703] (fd=3)
+[17:44:15.718889110, 17:44:15.719054555]  write                    165.445       52   B  sshd                     1225     socket:[22703] (fd=3)
+[17:44:23.375013958, 17:44:23.375171593]  write                    157.635       68   B  sshd                     1225     socket:[22703] (fd=3)
+[17:44:19.352208087, 17:44:19.352343385]  write                    135.298       44   B  sshd                     1225     socket:[22703] (fd=3)
+[17:44:15.240535321, 17:44:15.240661503]  write                    126.182       84   B  sshd                     1225     socket:[22703] (fd=3)
+[17:44:19.351818592, 17:44:19.351936192]  write                    117.600       52   B  sshd                     1225     socket:[22703] (fd=3)
+[17:44:19.351541703, 17:44:19.351657401]  write                    115.698       44   B  sshd                     1225     socket:[22703] (fd=3)
+[17:44:21.118949795, 17:44:21.119062372]  write                    112.577       68   B  sshd                     1225     socket:[22703] (fd=3)
+[17:44:16.504815566, 17:44:16.504923413]  write                    107.847      164   B  sshd                     1225     socket:[22703] (fd=3)
+[17:44:16.824171725, 17:44:16.824275167]  write                    103.442       84   B  sshd                     1225     socket:[22703] (fd=3)
+[17:44:19.352664067, 17:44:19.352763419]  write                     99.352       76   B  sshd                     1225     socket:[22703] (fd=3)
+
+Top system call latencies sync (usec)
+Begin                End                  Name             Duration (usec)         Size  Proc                     PID      Filename      
+[17:44:15.253542410, 17:44:15.253638342]  sync_file_range           95.932          N/A  lttng-consumerd          29519    /tmp/my-kernel-trace/kernel/channel0_1 (fd=54)
+[17:44:15.161313220, 17:44:15.161401357]  sync_file_range           88.137          N/A  lttng-consumerd          29518    /tmp/my-kernel-trace/kernel/metadata (fd=38)
+[17:44:15.251725948, 17:44:15.251806622]  sync_file_range           80.674          N/A  lttng-consumerd          29519    /tmp/my-kernel-trace/kernel/channel0_1 (fd=54)
+[17:44:15.254343900, 17:44:15.254424553]  sync_file_range           80.653          N/A  lttng-consumerd          29519    /tmp/my-kernel-trace/kernel/channel0_1 (fd=54)
+[17:44:15.251423469, 17:44:15.251499556]  sync_file_range           76.087          N/A  lttng-consumerd          29519    /tmp/my-kernel-trace/kernel/channel0_1 (fd=54)
+[17:44:15.174832607, 17:44:15.174908213]  sync_file_range           75.606          N/A  lttng-consumerd          29518    /tmp/my-kernel-trace/kernel/metadata (fd=38)
+[17:44:15.254762176, 17:44:15.254828243]  sync_file_range           66.067          N/A  lttng-consumerd          29519    /tmp/my-kernel-trace/kernel/channel0_1 (fd=54)
+[17:44:15.161519328, 17:44:15.161583877]  sync_file_range           64.549          N/A  lttng-consumerd          29518    /tmp/my-kernel-trace/kernel/metadata (fd=38)
+[17:44:15.167886554, 17:44:15.167947938]  sync_file_range           61.384          N/A  lttng-consumerd          29518    /tmp/my-kernel-trace/kernel/metadata (fd=38)
+[17:44:15.178397046, 17:44:15.178456504]  sync_file_range           59.458          N/A  lttng-consumerd          29518    /tmp/my-kernel-trace/kernel/metadata (fd=38)
+[17:44:15.178570467, 17:44:15.178629278]  sync_file_range           58.811          N/A  lttng-consumerd          29518    /tmp/my-kernel-trace/kernel/metadata (fd=38)
