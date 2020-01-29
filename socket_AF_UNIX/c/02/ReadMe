@@ -1,0 +1,3 @@
+file = server_socket
+server = 23398
+client = 23409,23415,23421,23427,23433
